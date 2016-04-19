@@ -1,6 +1,6 @@
 var http = require('http');
 var fs = require('fs');
-var port = process.env.PORT || '8000';
+var port = process.env.PORT || '8080';
 
 
 var server = http.createServer(function(req, res) {
@@ -27,5 +27,5 @@ io.sockets.on('connect', function(socket) {
   })
 });
 
-server.listen(8080);
+server.listen(port);
 console.log("Listening on port 8080");
