@@ -17,7 +17,7 @@
       }
     </style>
     <script>
-      var socketio = io.connect('gittychat.herokuapp.com:'+port);
+      var socketio = io.connect('https://gittychat.herokuapp.com');
 
       socketio.on('message_to_client', function(data) {
           document.getElementById('chat-window').innerHTML = ('<div class="im">' + data.message + ' - Date: ' + data.date + '</div>');
