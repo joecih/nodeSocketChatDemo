@@ -17,7 +17,7 @@
       }
     </style>
     <script>
-      var socketio = io.connect('127.0.0.1:8080');
+      var socketio = io.connect('127.0.0.1:'+port);
 
       socketio.on('message_to_client', function(data) {
           document.getElementById('chat-window').innerHTML = ('<div class="im">' + data.message + ' - Date: ' + data.date + '</div>');
